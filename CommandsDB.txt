@@ -1,0 +1,32 @@
+CREATE TABLE public.food_restaurant(
+    id integer NOT NULL,
+    name  character varying(50) NOT NULL,
+    address character varying(50) NOT NULL,
+    phone character varying(50) NOT NULL,
+)
+INSERT INTO food_restaurant(name,address,phone) VALUES ('Enroute Restaurant',"1st Street and 2nd","+521165710")
+
+CREATE TABLE public.food_purchase (
+    id integer NOT NULL,
+    date character varying(10) NOT NULL,
+    identification character varying(50) NOT NULL,
+    payment character varying(50) NOT NULL,
+    service character varying(50) NOT NULL,
+    restaurant_id integer NOT NULL
+);
+INSERT INTO food_purchase(date,identification,payment,service,restaurant_id) VALUES ('11/09/21','DNI','Credit/debit','On Site',2);
+CREATE TABLE public.food_dish (
+    id integer NOT NULL,
+    purchase_id integer NOT NULL
+);
+INSERT INTO food_dish(purchase_id) VALUE ('1');
+
+CREATE TABLE public.food_detaildish (
+    id integer NOT NULL,
+    name character varying(50) NOT NULL,
+    size integer NOT NULL,
+    price integer NOT NULL,
+    dish_id integer NOT NULL
+);
+INSERT INTO food_detaildish (name, size, price , dish_id) VALUES ('Taco asada',2,250,1);
+

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'graphene_django',
     'posts',
     'ingredients',
+    'food',
 ]
 
 GRAPHENE = {
@@ -84,11 +86,12 @@ WSGI_APPLICATION = 'socialnet.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hazel',
-        'USER': 'hazel2',
-        'PASSWORD': 'unodostres123',
-        'HOST':'localhost', #'ALLOWED_HOSTS': ['104.237.129.63'], # 'HOST': '104.237.129.63' OR 'HOST':'localhost'
-        'PORT': '5432', # 'PORT': 5432
+        'NAME': 'erick_gandarilla_d',
+        'USER': 'erick_gandarilla',
+        'PASSWORD': 'erick_gandarilla123*',
+        'ALLOWED_HOSTS':["104.237.129.63"],
+        'PORT':5432
+
     }
 }
 
