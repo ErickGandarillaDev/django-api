@@ -20,6 +20,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     path('restaurant/', include('food.urls')),
-    path('admin/', admin.site.urls),
     path(r"graphql", csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    path('admin/', admin.site.urls),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+
 ]

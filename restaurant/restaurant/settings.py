@@ -40,8 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'graphene_django',
+    'oauth2_provider',
     'food',
+    'users',
 ]
+
+AUTH_USER_MODEL='users.User'
+LOGIN_URL='/admin/login/'
+
 
 
 MIDDLEWARE = [

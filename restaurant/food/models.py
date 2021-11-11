@@ -6,7 +6,7 @@ class Restaurant(models.Model):
     phone = models.TextField()
 
     def __str__(self):
-        return self.title
+        return str(self.id)
   
 class Purchase(models.Model):
     date= models.TextField()
@@ -14,24 +14,24 @@ class Purchase(models.Model):
     payment = models.TextField()
     service = models.TextField()
     restaurant = models.ForeignKey(
-        Restaurant, related_name="food", on_delete=models.CASCADE
+        "Restaurant", on_delete=models.CASCADE
     )
     def __str__(self):
-        return self.title
+        return str(self.id)
 
 class Dish(models.Model):
     purchase = models.ForeignKey(
-        Purchase, related_name="food", on_delete=models.CASCADE
+        "Purchase", on_delete=models.CASCADE
     )
     def __str__(self):
-        return self.title
+        return str(self.id)
 
 class Detaildish(models.Model):
     name = models.TextField()
     size = models.BigIntegerField()
     price = models.BigIntegerField()
     dish = models.ForeignKey(
-        Dish, related_name="food", on_delete=models.CASCADE
+        "Dish", on_delete=models.CASCADE
     )
     def __str__(self):
         return self.title

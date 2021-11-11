@@ -8,22 +8,23 @@ class RestaurantSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = Restaurant
-        fields = ('url', 'id','name','address','phone')
+        fields = ( 'id','name','address','phone')
 
 class PurchaseSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = Purchase
-        fields = ('url', 'id', 'date', 'identification','payment','service','restaurant_id')
+        fields = '__all__'
+
 
 class DishSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = Dish
-        fields = ('url', 'id','purchase_id')
+        fields = '__all__'
 
 class DetaildishSerializer(serializers.HyperlinkedModelSerializer):
     # specify model and fields
     class Meta:
         model = Detaildish
-        fields = ('url', 'id', 'name','size','price','dish_id')
+        fields = '__all__'
