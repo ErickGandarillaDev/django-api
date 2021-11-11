@@ -14,7 +14,7 @@ CREATE TABLE public.food_purchase (
     service character varying(50) NOT NULL,
     restaurant_id integer NOT NULL
 );
-INSERT INTO food_purchase(date,identification,payment,service,restaurant_id) VALUES ('11/09/21','DNI','Credit/debit','On Site',2);
+INSERT INTO food_purchase(date,identification,payment,service,restaurant_id) VALUES ('11/09/21','DNI','Credit/debit','On Site',1);
 CREATE TABLE public.food_dish (
     id integer NOT NULL,
     purchase_id integer NOT NULL
